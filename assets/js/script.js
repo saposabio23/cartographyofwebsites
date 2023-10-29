@@ -515,35 +515,35 @@ function display_project(data, x, y, displayedProjects) {
   removeProjectFromAvailableProjects(data)
 
   // on écrit le tag dans l'historique
-  let lastTagDiv = document.createElement('div')
+  // let lastTagDiv = document.createElement('div')
 
-  let lastTagTitle = document.createElement('span')
-  lastTagTitle.className = 'button'
-  lastTagTitle.innerHTML = title;
-  lastTagTitle.dataset.indexDisplayedProject = indexDisplayedProject;
+  // let lastTagTitle = document.createElement('span')
+  // lastTagTitle.className = 'button'
+  // lastTagTitle.innerHTML = title;
+  // lastTagTitle.dataset.indexDisplayedProject = indexDisplayedProject;
 
-  let lastTagLabel = document.createElement('label')
+  // let lastTagLabel = document.createElement('label')
 
-  let lastTagCheck = document.createElement('input')
-  lastTagCheck.setAttribute("type", "checkbox");
-  lastTagCheck.setAttribute("name", url);
-  lastTagCheck.setAttribute("value", title + "[" + url + "]");
+  // let lastTagCheck = document.createElement('input')
+  // lastTagCheck.setAttribute("type", "checkbox");
+  // lastTagCheck.setAttribute("name", "sites[]");
+  // lastTagCheck.setAttribute("value", title + "(" + url + ")");
 
-  let lastTagStar = document.createElement('span')
-  lastTagStar.innerHTML = '⭐';
+  // let lastTagStar = document.createElement('span')
+  // lastTagStar.innerHTML = '⭐';
 
-  lastTagLabel.appendChild(lastTagCheck)
-  lastTagLabel.appendChild(lastTagStar)
+  // lastTagLabel.appendChild(lastTagCheck)
+  // lastTagLabel.appendChild(lastTagStar)
   
   
-  lastTagDiv.appendChild(lastTagTitle)
-  lastTagDiv.appendChild(lastTagLabel)
-  historyContent.prepend(lastTagDiv)
+  // lastTagDiv.appendChild(lastTagTitle)
+  // lastTagDiv.appendChild(lastTagLabel)
+  // historyContent.prepend(lastTagDiv)
 
-  lastTagTitle.addEventListener('click', (event) => {
-    let position = displayedProjects[event.target.dataset.indexDisplayedProject].data.projectPosition
-    set_scrollbars_position(position.scrollX, position.scrollY)
-  })
+  // lastTagTitle.addEventListener('click', (event) => {
+  //   let position = displayedProjects[event.target.dataset.indexDisplayedProject].data.projectPosition
+  //   set_scrollbars_position(position.scrollX, position.scrollY)
+  // })
 
 }
 
