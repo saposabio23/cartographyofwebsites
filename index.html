@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>CARTOGRAPHY</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <div class="welcoming">
+    <div>
+      <h1>CARTOGRAPHIE</h1>
+      <p>L'excercise de la cartographie consiste à faire une collection d'objets en lien avec notre mémoire et diplôme
+        de DNSEP. Tout autant important que ce rassemblement est la façon dont on le présente. Son organisation et
+        navigation est assez personnelle, puisque elle doit guider le public à travers cette collection qui est celle
+        que l'on a réuni au long de plusieurs mois.</p>
+      <button id="welcome">Commencez !</button>
+    </div>
+  </div>
+
+  <div class="side">
+
+    <div class="history hidden">
+      <div class="header">
+        <h5>Historique</h5>
+        <!-- <div id="buttonEmail" class="hoverShadow "><img src="assets/img/mail.png"></div> -->
+      </div>
+      <div class="historyContent">
+        <form name="contact" method="POST" netlify id="historyForm">
+          <div class="message"></div>
+          <!-- <label for="title">I have a bike</label>
+          <input type="checkbox" name="title" value="title [url]"> -->
+
+          <div class="sender">You can select the sites you like and receive them on your inbox ↓<br>
+            <div>
+              <input type="email" name="email" placeholder="Your e-mail" />
+              <button type="submit">Send the list</button>
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+
+    <div class="index hidden">
+      <div class="header">
+        <h5>Index</h5>
+        <!-- <div id="buttonEmail" class="hoverShadow "><img src="assets/img/index.png"></div> -->
+      </div>
+      <div class="indexContent"></div>
+    </div>
+
+    <div class="about hidden">
+      <div class="header">
+        <h5>Index</h5>
+        <!-- <div id="buttonEmail" class="hoverShadow "><img src="assets/img/about.png"></div> -->
+      </div>
+      <p>Comme vous l'avez déjà remarqué, puisque vous lisez ce texte à l'écran, la forme de ma cartographie est
+        numérique, et ce site/outil vous permettra de la parcourir. Et de quoi est composé cette collection? De sites
+        webs
+        qui me plaisaient (tant sa forme que son fond) et d'autres que j'ai pu découvrir à travers des hyperliens et de
+        l'outil communautaire <a href="are.na">are.na</a>.</p>
+      <p>Pour finir je tiendrais à remercier Patrick Doan de nous avoir proposé cet exercice que je trouve très
+        intéressant et à Olivier Cornet d'avoir codé avec moi les engrenages du site que vous allez bientôt utiliser.
+    </div>
+
+  </div>
+
+  <div id='viewport' class='dragscroll nochilddrag'>
+    <div id='carto'>
+      <div class="startLoading tagButton noHover"><span id="tagToLoad"></span><img src="./assets/img/spinner.gif"></div>
+      <div class="tagList">
+        <p>Voici les tags qui décrivent les sites web de cette collection. À l'heure acutelle il y en a <b>188</b>.<br>
+          Sélectionne un pour découvrir le premier site web.</p>
+      </div>
+      <div class="tagMore">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="menu">
+    <div id="buttonAbout" class="hoverShadow ">
+      <img src="assets/img/about.png">
+      <span>À propos</span>
+    </div>
+    <div id="buttonIndex" class="hoverShadow highlight">
+      <img src="assets/img/index.png">
+      <span>Index</span>
+    </div>
+    <div id="buttonHistory" class="hoverShadow highlight">
+      <img src="assets/img/history.png">
+      <span>Historique</span>
+    </div>
+    <div id="buttonRestart" class="hoverShadow ">
+      <img src="assets/img/restart.png">
+      <span>Relancer</span>
+    </div>
+    <div id="buttonRandom" class="hoverShadow ">
+      <img src="assets/img/random.png">
+      <span>Aléatoire</span>
+    </div>
+    <div id="buttonOptions" class="hoverShadow ">
+      <img src="assets/img/options.png">
+      <span>Options</span>
+    </div>
+  </div>
+
+  <audio id="soundhover" src="assets/sound/soundhover.mp3" preload="auto"></audio>
+  <!-- 
+  <div class="zoom">
+    <div id="lesszoom" class="hoverShadow">−</div>
+    <div id="morezoom" class="hoverShadow">+</div>
+  </div> -->
+
+  <div class="zoom">
+    <input type="range" min="20" max="100" value="100" name="zoom" id="bookzoom">
+  </div>
+
+
+  <div class="background"></div>
+  <div class="blackScreen hidden"></div>
+
+
+  <script src='./assets/js/data.js'></script>
+  <script src='./assets/js/script.js'></script>
+  <script src='./assets/js/addons.js'></script>
+  <script src='./assets/js/dragscroll.js'></script>
+</body>
+
+</html>
